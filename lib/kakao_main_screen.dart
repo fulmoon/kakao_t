@@ -28,9 +28,6 @@ class _KakaoMainScreenState extends State<KakaoMainScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('카카오 T'),
-      ),
       body: (
       screens[_selectedIndex]
       ),

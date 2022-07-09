@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('이용서비스'),
+        title: Text('카카오 T'),
       ),
       backgroundColor: Colors.blue,
     );
