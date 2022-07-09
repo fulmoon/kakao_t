@@ -10,6 +10,7 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('이용서비스'),
       ),
+      backgroundColor: Colors.blue,
     );
   }
 }

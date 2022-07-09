@@ -10,6 +10,7 @@ class InfoScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('내 정보'),
       ),
+      backgroundColor: Colors.green,
     );
   }
 }
