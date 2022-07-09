@@ -1,8 +1,26 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class KakaoMainScreen extends StatelessWidget {
+class KakaoMainScreen extends StatefulWidget {
   const KakaoMainScreen({Key? key}) : super(key: key);
+
+  @override
+  State<KakaoMainScreen> createState() => _KakaoMainScreenState();
+}
+
+class _KakaoMainScreenState extends State<KakaoMainScreen> {
+  int _selectedIndex = 0;
+
+  final screens= [
+    Text('1', style: TextStyle(fontSize: 40)),
+    Text('2', style: TextStyle(fontSize: 40)),
+    Text('3', style: TextStyle(fontSize: 40)),
+  ];
+  void _onItemTapped(int index) {
+    setState(() {
+      _selectedIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +28,12 @@ class KakaoMainScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text('카카오 T'),
       ),
+      body: (
+      screens[_selectedIndex]
+      ),
       bottomNavigationBar: BottomNavigationBar(
+        onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
         items: const[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
